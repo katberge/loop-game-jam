@@ -1,0 +1,177 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvfhepff2qxmf"]
+
+[sub_resource type="Environment" id="Environment_5e1uj"]
+background_mode = 2
+background_energy_multiplier = 0.0
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.02
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qetym"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5e1uj"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5e1uj"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5e1uj")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1.31997, 0, 0, 0, 1.31997, 0, 0, 0, 1.31997, 0, 3, 5)
+
+[node name="lights" type="Node3D" parent="."]
+
+[node name="fromscreen" type="DirectionalLight3D" parent="lights"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="environment" type="Node3D" parent="."]
+
+[node name="stage" type="Node3D" parent="environment"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0)
+
+[node name="floor" type="MeshInstance3D" parent="environment/stage"]
+transform = Transform3D(10.5, 0, 0, 0, 1.05, 0, 0, 0, 10.5, 0, -0.5, -8)
+mesh = SubResource("PlaneMesh_qetym")
+skeleton = NodePath("../../..")
+
+[node name="row1" type="Node3D" parent="environment/stage"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0)
+
+[node name="chair" type="MeshInstance3D" parent="environment/stage/row1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair6" type="MeshInstance3D" parent="environment/stage/row1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair7" type="MeshInstance3D" parent="environment/stage/row1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair2" type="MeshInstance3D" parent="environment/stage/row1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair3" type="MeshInstance3D" parent="environment/stage/row1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair4" type="MeshInstance3D" parent="environment/stage/row1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair5" type="MeshInstance3D" parent="environment/stage/row1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="row2" type="Node3D" parent="environment/stage"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, -3)
+
+[node name="chair" type="MeshInstance3D" parent="environment/stage/row2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair6" type="MeshInstance3D" parent="environment/stage/row2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair7" type="MeshInstance3D" parent="environment/stage/row2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair2" type="MeshInstance3D" parent="environment/stage/row2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair3" type="MeshInstance3D" parent="environment/stage/row2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair4" type="MeshInstance3D" parent="environment/stage/row2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair5" type="MeshInstance3D" parent="environment/stage/row2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="row3" type="Node3D" parent="environment/stage"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, -6)
+
+[node name="chair" type="MeshInstance3D" parent="environment/stage/row3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair6" type="MeshInstance3D" parent="environment/stage/row3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair7" type="MeshInstance3D" parent="environment/stage/row3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair2" type="MeshInstance3D" parent="environment/stage/row3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair3" type="MeshInstance3D" parent="environment/stage/row3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair4" type="MeshInstance3D" parent="environment/stage/row3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="chair5" type="MeshInstance3D" parent="environment/stage/row3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -0.234045, 0)
+mesh = SubResource("BoxMesh_5e1uj")
+skeleton = NodePath("../../../..")
+
+[node name="walls" type="Node3D" parent="environment"]
+
+[node name="far" type="MeshInstance3D" parent="environment/walls"]
+transform = Transform3D(10, 0, 0, 0, -5.86125e-08, -10, 0, 1, -1.98695e-07, 0, 6, -18)
+mesh = SubResource("PlaneMesh_qetym")
+skeleton = NodePath("../../..")
+
+[node name="ceiling" type="MeshInstance3D" parent="environment/walls"]
+transform = Transform3D(10, 0, 0, 0, -1, 6.35809e-07, 0, -1.02324e-07, -10, 0, 16, -8)
+mesh = SubResource("PlaneMesh_qetym")
+skeleton = NodePath("../../..")
+
+[node name="left" type="MeshInstance3D" parent="environment/walls"]
+transform = Transform3D(-4.37114e-07, 1, -1.98695e-07, 0, -5.86125e-08, -10, -10, -4.37114e-08, -2.68419e-14, -10, 6, -8)
+mesh = SubResource("PlaneMesh_qetym")
+skeleton = NodePath("../../..")
+
+[node name="right" type="MeshInstance3D" parent="environment/walls"]
+transform = Transform3D(1.31134e-06, -1, 1.98695e-07, 1.55294e-21, -5.86125e-08, -10, 10, 1.31134e-07, 9.47138e-15, 10, 6, -8)
+mesh = SubResource("PlaneMesh_qetym")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.584828, 0)
+mesh = SubResource("CapsuleMesh_5e1uj")
